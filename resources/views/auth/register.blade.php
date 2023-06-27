@@ -10,10 +10,14 @@
 <body>
     <div class="container">
         <form action="{{ route('register') }}" method="post">
+            @csrf
             <div class="row">
                 <div class="col">
                     <label class="form-label" for="username">Username</label>
                     <input type="text" name="username" id="" class="form-control">
+                    @error('name')
+                        
+                    @enderror
                 </div>
                 <div class="col">
                     <label  class="form-label" for="email">Email</label>
@@ -22,7 +26,7 @@
             </div>
             <label  class="form-label" for="password">Password</label>
             <input type="password" name="password" id="" class="form-control">
-            <button class="btn btn-success container-fluid">S'inscrire</button>
+            <button class="btn btn-success mt-3 container-fluid">S'inscrire</button>
         </form>
     </div>
 <script src="{{ asset('bootstrap.bundle.min.js') }}"></script>
