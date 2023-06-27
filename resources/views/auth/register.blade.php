@@ -32,11 +32,12 @@
             @error('password')
             {{ $message }}
         @enderror
+        {{-- <br>
         <label  class="form-label" for="password">Confirmation</label>
-        <input type="password" name="confirm_password" id="" class="form-control" value="{{ old('confirm_password') }}">
+        <input type="password" name="password_confirm" id="" class="form-control" value="{{ old('password_confirm') }}">
         @error('confirm_password')
         {{ $message }}
-    @enderror
+    @enderror --}}
             <button class="btn btn-success mt-3 container-fluid">S'inscrire</button>
         </form>
     </div>
