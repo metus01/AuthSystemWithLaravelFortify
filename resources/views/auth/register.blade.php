@@ -9,19 +9,21 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <label class="form-label" for="username">Username</label>
-                <input type="text" name="username" id="" class="form-control">
+        <form action="{{ route('register') }}" method="post">
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" name="username" id="" class="form-control">
+                </div>
+                <div class="col">
+                    <label  class="form-label" for="email">Email</label>
+                    <input type="email" name="email" id="" class="form-control">
+                </div>
             </div>
-            <div class="col">
-                <label  class="form-label" for="email">Email</label>
-                <input type="email" name="email" id="" class="form-control">
-            </div>
-        </div>
-        <label  class="form-label" for="password">Password</label>
-        <input type="password" name="password" id="" class="form-control">
-        <button class="btn btn-success container-fluid">S'inscrire</button>
+            <label  class="form-label" for="password">Password</label>
+            <input type="password" name="password" id="" class="form-control">
+            <button class="btn btn-success container-fluid">S'inscrire</button>
+        </form>
     </div>
 <script src="{{ asset('bootstrap.bundle.min.js') }}"></script>
 </body>

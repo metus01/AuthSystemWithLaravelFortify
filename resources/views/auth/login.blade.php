@@ -16,7 +16,8 @@
 <body>
     <div class="container">
         <h1 class="text mt-4 text-center text-success">Fortify Login</h1>
-        <form action="" method="post">
+        <form action="{{ route('login') }}" method="post">
+        @csrf
             <div class="row">
                 <div class="col">
                     <label class="form-label" for="username">Username</label>
